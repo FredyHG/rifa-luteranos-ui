@@ -1,0 +1,19 @@
+<nav class="nav-bar">
+  <div class="nav-items">
+    <span class="logo">LOGO</span>
+    <div class="nav-actions">
+      <button class="nav-button">Rifas Disponiveis</button>
+      <button class="nav-button">Minhas Rifas</button>
+      <button class="nav-button">Carrinho</button>
+    </div>
+    <div class="nav-resized-button">
+      <i class="ph ph-list" (click)="toggleTabBar()"></i>
+    </div>
+  </div>
+  <div class="nav-collapse-actions" *ngIf="resized">
+    <button class="nav-button">Rifas Disponiveis</button>
+    <button class="nav-button">Minhas Rifas</button>
+    <button class="nav-button">Carrinho</button>
+  </div>
+</nav>
+
