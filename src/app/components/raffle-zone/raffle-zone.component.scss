@@ -1,12 +1,13 @@
 @import "../../../styles/variables";
 
+
 .raffle-area{
   display: flex;
   flex-direction: column;
   gap: 3vh;
   background-color: #f6f6f6;
   box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
-  width: 100%;
+  margin: 5vh;
   .area-title{
     padding: 10px;
     .title{
@@ -18,6 +19,7 @@
   .card-area{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 15px;
     gap: 4vh;
     .card{
@@ -25,9 +27,8 @@
       &:hover{
         background-color: #9fc7b0;
       }
-      //border: solid 2px #B4DCC1;
       border-radius: 8px;
-      width: 20vh;
+      width:  calc(100% / 10);
       height: auto;
       cursor: pointer;
       .card-image{
