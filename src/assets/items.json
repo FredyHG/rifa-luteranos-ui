@@ -1,0 +1,18 @@
+[
+  {"num": 1, "name": "Rosa", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 2, "name": "Margarida", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 3, "name": "Tulipa", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 4, "name": "Orquídea", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 5, "name": "Girassol", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 6, "name": "Lírio", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 7, "name": "Cravo", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 8, "name": "Hortênsia", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 9, "name": "Lavanda", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 10, "name": "Gérbera", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 11, "name": "Jasmim", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 12, "name": "Craveiro", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 13, "name": "Bromélia", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 14, "name": "Antúrio", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 15, "name": "Camélia", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00},
+  {"num": 16, "name": "Dália", "image": "https://picsum.photos/200", "reserved": false, "price":  25.00}
+]
