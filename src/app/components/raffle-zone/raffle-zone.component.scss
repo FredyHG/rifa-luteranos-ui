@@ -4,17 +4,21 @@
 .raffle-area{
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 1vh;
   background-color: #f6f6f6;
   box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
-  margin: 5vh;
+  margin: 7vh;
   .area-title{
-    padding: 10px;
+    padding: 20px;
     .title{
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
       font-weight: 500;
+      border-left: 10px solid #9fc7b0;
+      padding-left: 5px;
     }
+
+
   }
   .card-area{
     display: flex;
@@ -24,11 +28,9 @@
     gap: 4vh;
     .card{
       background-color: #e9edea;
-      &:hover{
-        background-color: #9fc7b0;
-      }
       border-radius: 8px;
-      width:  calc(100% / 10);
+      width: calc(100% /10);
+      min-width: 130px;
       height: auto;
       cursor: pointer;
       .card-image{
@@ -37,8 +39,8 @@
         align-items: center;
         padding-top: 8px;
         .image{
+          width: 90%;
           border-radius: 8px;
-          width: 18vh;
         }
       }
 
@@ -46,12 +48,46 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        padding: 5px;
+        flex-direction: column;
+        align-items: center;
         .title{
           color: #363434;
           font-family: Poppins, sans-serif;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 16px;
+        }
+        .price{
+          color: #363434;
+          font-family: Roboto, sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+
+      .card-actions{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        button{
+          display: flex;
+          align-items: center;
+          border: none;
+          color: #363434;
+          font-family: Roboto, sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          cursor: pointer;
+          background-color: #9fc7b0;
+          padding: 8px;
+          border-radius: 8px;
+
+          .ph-shopping-cart{
+            font-size: 20px;
+            font-weight: lighter;
+          }
+          &:hover{
+            color: white;
+          }
         }
       }
     }
