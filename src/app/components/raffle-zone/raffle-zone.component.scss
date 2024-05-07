@@ -29,8 +29,7 @@
     .card{
       background-color: #e9edea;
       border-radius: 8px;
-      width: calc(100% /10);
-      min-width: 130px;
+      min-width: 220px;
       height: auto;
       .card-image{
         display: flex;
@@ -53,20 +52,16 @@
           color: #0F1D22;
           font-family: Poppins, sans-serif;
           font-weight: 500;
-          font-size: 16px;
-        }
-        .price{
-          color: #0F1D22;
-          font-family: Roboto, sans-serif;
-          font-weight: 500;
-          font-size: 14px;
+          font-size: 20px;
         }
       }
 
       .card-actions{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         padding: 10px;
+        align-items: baseline;
+        gap: 24px;
         button{
           display: flex;
           align-items: center;
@@ -79,14 +74,22 @@
           background-color: #9fc7b0;
           padding: 8px;
           border-radius: 8px;
-
-          .ph-shopping-cart{
-            font-size: 20px;
+          width: 30%;
+          justify-content: center;
+          .pi-cart-plus{
+            font-size: 18px;
             font-weight: lighter;
           }
           &:hover{
             color: #4E9844;
           }
+
+        }
+        .price{
+          font-family: "Roboto", sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+          color: #22431E;
         }
       }
     }

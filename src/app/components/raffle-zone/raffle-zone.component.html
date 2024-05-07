@@ -5,14 +5,14 @@
   <div class="card-area">
     <div class="card" *ngFor="let item of items">
       <div class="card-image">
-        <img src="https://picsum.photos/200?random={{item.num}}" alt=" image" class="image">
+            <img src="https://picsum.photos/200?random={{item.num}}" alt=" image" class="image">
       </div>
       <div class="card-title">
-        <span class="title">{{item.num}} - {{item.name}}</span>
-        <span class="price"> R$ {{ item.price }} </span>
+            <span class="title">{{item.name}}</span>
       </div>
       <div class="card-actions">
-        <button (click)="addCart(item)"><i class="ph ph-shopping-cart"></i>Adicionar ao carrinho</button>
+          <span class="price"> R$ {{ item.price }} </span>
+          <button (click)="addCart(item)"><i class="pi pi-cart-plus"></i></button>
       </div>
     </div>
   </div>
