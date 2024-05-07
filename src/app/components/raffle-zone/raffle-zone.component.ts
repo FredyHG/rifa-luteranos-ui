@@ -3,6 +3,7 @@ import {ItemService} from "../../services/item.service";
 import {Item} from "../../models/Item";
 import {resolve} from "@angular/compiler-cli";
 import {NgForOf} from "@angular/common";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-raffle-zone',
@@ -25,10 +26,18 @@ export class RaffleZoneComponent {
     this.itemService.getItems().subscribe({
       next: response => {
         this.items = response
-        console.log(this.items)
       },
 
     })
   }
 
+  addCart(itemToAdd: Item): void{
+
+    this.items = this.items.filter(item => item.name !== itemToAdd.name);
+    this.itemService.addItemInCar(itemToAdd);
+  }
+
+  removeItem(item: Item) {
+    this.itemService.removeItemInCar(item);
+  }
 }

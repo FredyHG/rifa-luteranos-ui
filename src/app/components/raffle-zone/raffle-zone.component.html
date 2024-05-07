@@ -12,7 +12,7 @@
         <span class="price"> R$ {{ item.price }} </span>
       </div>
       <div class="card-actions">
-        <button><i class="ph ph-shopping-cart"></i>Adicionar ao carrinho</button>
+        <button (click)="addCart(item)"><i class="ph ph-shopping-cart"></i>Adicionar ao carrinho</button>
       </div>
     </div>
   </div>
