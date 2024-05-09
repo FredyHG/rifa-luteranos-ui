@@ -1,25 +1,40 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ItemService} from "../../services/item.service";
 import {Item} from "../../models/Item";
-import {resolve} from "@angular/compiler-cli";
 import {NgForOf} from "@angular/common";
-import {BehaviorSubject} from "rxjs";
+import {CarouselModule} from "primeng/carousel";
+import {SpeedDialModule} from "primeng/speeddial";
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-raffle-zone',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    CarouselModule,
+    SpeedDialModule
   ],
   templateUrl: './raffle-zone.component.html',
   styleUrl: './raffle-zone.component.scss'
 })
-export class RaffleZoneComponent {
+export class RaffleZoneComponent implements OnInit{
 
   items: Item[] = [];
+  itemsFloatButton: MenuItem[] = [];
 
   constructor(private itemService: ItemService) {
     this.getItems();
+  }
+
+  ngOnInit(): void {
+    this.itemsFloatButton = [
+      {
+        icon: 'pi pi-shopping-cart',
+        command: () => {
+          console.log('clicked')
+        }
+      },
+    ];
   }
 
   getItems(): void{
@@ -40,4 +55,6 @@ export class RaffleZoneComponent {
   removeItem(item: Item) {
     this.itemService.removeItemInCar(item);
   }
+
+
 }
