@@ -1,0 +1,35 @@
+.cart-page{
+  .side-navbar{
+    background-color: #e9edea;
+    width: 16%;
+    .nav-actions{
+      display: flex;
+      flex-direction: column;
+
+      min-width: 200px;
+      height: 100vh;
+      padding-top: 2rem;
+      gap: 1rem;
+      .nav-button{
+        cursor: pointer;
+        display: flex;
+        border: none;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Poppins", sans-serif;
+        align-items: center;
+        padding-left: 10%;
+        background-color: #e9edea;
+        .ph{
+          font-weight: 600;
+          padding-right: 10px;
+        }
+
+        &:hover{
+          background-color: #CCD0CD;
+        }
+      }
+    }
+  }
+}
