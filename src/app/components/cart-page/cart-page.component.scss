@@ -1,54 +1,33 @@
-*{
-  outline: red solid thin;
-}
 .cart-page{
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-  background-color: #f6f6f6;
-  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
-  margin: 7vh;
-  .title-area{
-    .title{
-      font-size: 18px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      border-left: 10px solid #9fc7b0;
-      padding-left: 5px;
-    }
-  }
+  .side-navbar{
+    background-color: #e9edea;
+    width: 16%;
+    .nav-actions{
+      display: flex;
+      flex-direction: column;
 
-  .raffle-area{
-    display: flex;
-    gap: 4vh;
-    padding: 2vh;
-    .pending-raffle, .confirmed-raffle{
-      width: 100%;
-      min-height: 70vh;
-      .title-area{
+      min-width: 200px;
+      height: 100vh;
+      padding-top: 2rem;
+      gap: 1rem;
+      .nav-button{
+        cursor: pointer;
         display: flex;
-        justify-content: center;
-        .pending-raffle-title, .confirmed-raffle-title{
-          font-size: 16px;
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
+        border: none;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Poppins", sans-serif;
+        align-items: center;
+        padding-left: 10%;
+        background-color: #e9edea;
+        .ph{
+          font-weight: 600;
+          padding-right: 10px;
         }
-      }
-      .raffles-area{
-        .raffle{
-          display: flex;
-          background-color: #e8ede9;
-          .raffle-image{
-            .image{
-              width: 4rem;
-            }
-          }
 
-          .raffle-infos{
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-          }
+        &:hover{
+          background-color: #CCD0CD;
         }
       }
     }
