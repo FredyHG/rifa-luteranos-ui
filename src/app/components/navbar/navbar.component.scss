@@ -4,6 +4,7 @@
   background-color: #abccb2;
   padding: 20px 30px 20px 30px;
   box-shadow: 0 8px 6px -6px #fcfffd;
+
   .nav-items{
     display: flex;
     justify-content: space-between;
@@ -12,16 +13,24 @@
     .nav-actions{
       display: flex;
       gap: 30px;
-
+      align-items: center;
       .nav-button{
         border: none;
-        color: black;
+        color: #313A33;
         background-color: #abccb2;
-        font-family: Roboto, sans-serif;
-        font-weight: 500w;
-        font-size: 15px;
+        font-family: Arial, sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
         &:hover{
           cursor: pointer;
+          color: #4A584D;
+        }
+
+        .ph-shopping-cart{
+          font-size: 22px;
+          font-weight: 500;
         }
       }
     }
@@ -69,4 +78,12 @@
   }
 }
 
+:host ::ng-deep {
+  .p-badge {
+    background: #647768;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
 
