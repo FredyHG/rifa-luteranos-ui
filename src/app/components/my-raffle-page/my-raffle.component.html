@@ -1,9 +1,18 @@
 <div class="cart-page">
   <div class="side-navbar">
     <div class="nav-actions">
-      <button class="nav-button" (click)="changeArea('Confirmadas')"><i class="ph ph-seal-check"></i>Confirmadas</button>
-      <button class="nav-button" (click)="changeArea('Pendentes')"><i class="ph ph-clock-countdown"></i>Pendentes</button>
-      <button class="nav-button" (click)="changeArea('Finalizadas')"><i class="ph ph-check-fat"></i>Finalizadas</button>
+      <button class="nav-button" (click)="changeArea('Confirmadas')">
+        <i class="ph ph-seal-check"></i>
+        <span>Confirmadas</span>
+      </button>
+      <button class="nav-button" (click)="changeArea('Pendentes')">
+        <i class="ph ph-clock-countdown"></i>
+        <span>Pendentes</span>
+      </button>
+      <button class="nav-button" (click)="changeArea('Finalizadas')">
+        <i class="ph ph-check-fat"></i>
+        <span>Finalizadas</span>
+      </button>
     </div>
   </div>
 
@@ -11,7 +20,7 @@
     <div class="raffle-area-title">
       <span class="title">Minhas Rifas {{ currentArea }}</span>
     </div>
-    <div>
+    <div class="table-container">
       <p-table [value]="items" [tableStyle]="{'min-width': '60rem'}" [scrollable]="true" scrollHeight="75vh">
         <ng-template pTemplate="header">
           <tr>
@@ -26,11 +35,6 @@
             <td><img [src]="'https://picsum.photos/200?random=' + product.num" [alt]="product.name" width="35" class="shadow-4" /></td>
             <td>{{product.price | currency:'BRL'}}</td>
           </tr>
-        </ng-template>
-        <ng-template pTemplate="summary">
-          <div class="flex align-items-center justify-content-between">
-            In total there are {{ items ? items.length : 0 }} products.
-          </div>
         </ng-template>
       </p-table>
     </div>
