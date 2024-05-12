@@ -31,7 +31,6 @@ export class MyRaffleComponent {
       next: response => {
         this.items = response
       },
-
     })
   }
 

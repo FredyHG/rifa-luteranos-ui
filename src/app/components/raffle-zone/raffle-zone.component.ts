@@ -56,5 +56,4 @@ export class RaffleZoneComponent implements OnInit{
     this.itemService.removeItemInCar(item);
   }
 
-
 }
