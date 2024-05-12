@@ -6,17 +6,17 @@ import {Item} from "../../models/Item";
 import {ItemService} from "../../services/item.service";
 
 @Component({
-  selector: 'app-cart-page',
+  selector: 'app-my-raffle-page',
   standalone: true,
   imports: [
     CurrencyPipe,
     TableModule,
     ButtonModule
   ],
-  templateUrl: './cart-page.component.html',
-  styleUrl: './cart-page.component.scss'
+  templateUrl: './my-raffle.component.html',
+  styleUrl: './my-raffle.component.scss'
 })
-export class CartPageComponent {
+export class MyRaffleComponent {
 
   currentArea: string = "Confirmadas";
 
@@ -31,10 +31,8 @@ export class CartPageComponent {
       next: response => {
         this.items = response
       },
-
     })
   }
-
 
   changeArea(area: string) {
     this.currentArea = area;

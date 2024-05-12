@@ -7,7 +7,6 @@
     .nav-actions{
       display: flex;
       flex-direction: column;
-
       min-width: 200px;
       height: 100vh;
       padding-top: 2rem;
@@ -17,6 +16,7 @@
         display: flex;
         border: none;
         height: 40px;
+        min-width: 150px;
         font-size: 16px;
         font-weight: 500;
         font-family: "Poppins", sans-serif;
@@ -30,6 +30,19 @@
 
         &:hover{
           background-color: #CCD0CD;
+        }
+      }
+    }
+    @media screen and (max-width: 901px) {
+      width: 45px;
+      .nav-actions{
+        display: flex;
+        .nav-button{
+          width: 30px;
+          padding-left: 0;
+          span{
+            display: none;
+          }
         }
       }
     }
@@ -47,15 +60,24 @@
     }
   }
 
-  .raffle-table-area{
-    .table-container{
-
-    }
+  .table-container{
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: auto;
   }
 }
 
 :host ::ng-deep {
+  .p-datatable-table{
+    width: auto;
+  }
+
+  .p-datatable-thead{
+    background-color: red;
+  }
   .p-datatable {
+    width: 80%;
     .p-datatable-tbody {
       tr {
         background-color: #f6f6f6;
