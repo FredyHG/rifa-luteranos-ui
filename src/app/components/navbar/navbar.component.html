@@ -1,10 +1,10 @@
 <nav class="nav-bar">
   <div class="nav-items">
-    <span class="logo">Luteranos</span>
+    <span class="logo">LOGO</span>
     <div class="nav-actions">
-      <button class="nav-button">Rifas Disponiveis</button>
-      <button class="nav-button">Minhas Rifas</button>
-      <button class="nav-button"><i class="ph ph-shopping-cart" pBadge value="{{ itemsInCard }}"></i></button>
+      <button [class.active]="currentArea === 'raffles'"  (click)="navigateTo('raffles')" class="nav-button">Rifas Disponiveis</button>
+      <button [class.active]="currentArea === 'myraffles'" (click)="navigateTo('myraffles')" class="nav-button">Minhas Rifas</button>
+      <button [class.active]="currentArea === 'cart'" (click)="navigateTo('cart')" class="nav-button"><i class="ph ph-shopping-cart" pBadge value="{{ itemsInCard }}"></i></button>
     </div>
     <div class="nav-resized-button">
       <i class="ph ph-list" (click)="toggleTabBar()"></i>

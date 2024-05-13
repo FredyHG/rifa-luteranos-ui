@@ -1,38 +1,54 @@
 @import "../../../styles/variables";
 
 .nav-bar{
-  background-color: #abccb2;
-  padding: 20px 30px 20px 30px;
+  background-color: #e9edea;
   box-shadow: 0 8px 6px -6px #fcfffd;
 
   .nav-items{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding-right: 10%;
+    padding-left: 10%;
     .nav-actions{
       display: flex;
       gap: 30px;
       align-items: center;
+      height: 60px;
+
       .nav-button{
+        padding: 20px;
         border: none;
-        color: #313A33;
-        background-color: #abccb2;
+        color: #5e8665;
+        background-color: #e9edea;
         font-family: Arial, sans-serif;
         font-weight: 600;
         font-size: 14px;
         display: flex;
-        align-items: flex-end;
+        height: 100%;
+        align-items: center;
         &:hover{
           cursor: pointer;
-          color: #4A584D;
+          color: black;
+          background-color: #abccb2;
         }
+
+
 
         .ph-shopping-cart{
           font-size: 22px;
           font-weight: 500;
         }
+
+
       }
+
+      .active{
+        background-color: #abccb2;
+        color: black;
+      }
+
+
     }
 
     .nav-resized-button{
@@ -53,11 +69,12 @@
     .nav-button{
       font-weight: 500w;
       font-size: 15px;
-      height: 25px;
       border: none;
       color: black;
       background-color: #abccb2;
       text-align: right;
+      align-items: center;
+      height: 100%;
     }
   }
 

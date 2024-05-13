@@ -1,5 +1,5 @@
 import {Component, HostListener} from '@angular/core';
-import {NgIf} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
 import {BadgeModule} from "primeng/badge";
 import {ItemService} from "../../services/item.service";
 import {Item} from "../../models/Item";
@@ -9,7 +9,8 @@ import {Item} from "../../models/Item";
   standalone: true,
   imports: [
     NgIf,
-    BadgeModule
+    BadgeModule,
+    NgClass
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
@@ -18,6 +19,7 @@ export class NavbarComponent {
 
   resized: boolean = false;
   itemsInCard: number = 0;
+  currentArea: string = 'raffles';
 
   constructor(private itemService: ItemService) {
     this.itemService.itemInCart$.subscribe(
@@ -36,5 +38,9 @@ export class NavbarComponent {
     if (event.target.innerWidth >= 600) {
       this.resized = false;
     }
+  }
+
+  navigateTo(path: string) {
+    this.currentArea = path;
   }
 }
