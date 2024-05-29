@@ -5,7 +5,7 @@
   height: 92vh;
   .side-navbar{
     background-color: #e9edea;
-    width: 16%;
+    width: 10rem;
     .actions{
       display: flex;
       flex-direction: column;
@@ -35,10 +35,25 @@
         }
       }
     }
+    .nav-actions{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .nav-button {
+        display: flex;
+        border: none;
+        padding: 1rem;
+        font-size: 16px;
+        width: 100%;
+        span{
+          margin-left: 0.1rem;
+        }
+      }
+
+    }
     @media screen and (max-width: 901px) {
       width: 45px;
       .nav-actions{
-        display: flex;
         .nav-button{
           width: 30px;
           padding-left: 0;
