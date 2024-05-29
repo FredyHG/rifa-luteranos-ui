@@ -1,10 +1,12 @@
 .cart-page{
   display: flex;
-  gap:5px;
+  // gap:5px;
+  justify-content: space-between;
+  height: 92vh;
   .side-navbar{
     background-color: #e9edea;
     width: 16%;
-    .nav-actions{
+    .actions{
       display: flex;
       flex-direction: column;
       min-width: 200px;
@@ -49,10 +51,10 @@
   }
 
   .raffle-area{
-    background-color: #f6f6f6;
+    // background-color: #f6f6f6;
     width: 100%;
     display: flex;
-    padding: 2vh;
+    // padding: 2vh;
     flex-direction: column;
     gap: 4vh;
     .title-area{
@@ -68,37 +70,6 @@
   }
 }
 
-:host ::ng-deep {
-  .p-datatable-table{
-    width: auto;
-  }
-
-  .p-datatable-thead{
-    background-color: red;
-  }
-  .p-datatable {
-    width: 80%;
-    .p-datatable-tbody {
-      tr {
-        background-color: #f6f6f6;
-        td{
-          padding: 0.3rem 0.3rem;
-          font-size: 12px;
-        }
-
-
-      }
-    }
-
-    .p-datatable-thead {
-      tr {
-        th{
-          padding: 0.3rem 0.3rem;
-          font-size: 14px;
-        }
-      }
-    }
-
-
-  }
+::ng-deep p-table {
+  width: 100%;
 }
