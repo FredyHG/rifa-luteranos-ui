@@ -1,0 +1,45 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  .card {
+    display: flex;
+    border: red 1px solid;
+    width: 60%;
+    height: auto;
+    .card-header {
+      width: 60%;
+      height: auto;
+    }
+    .card-body {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      width: 40%;
+      .p-password-panel {
+        width: 100%;
+      }
+      .input-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        .field-title {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
+:host ::ng-deep {
+  .p-password {
+    width: 100%;
+  }
+  .p-inputtext{
+    width: 100%;
+  }
+
+}
