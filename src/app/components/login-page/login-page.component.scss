@@ -5,7 +5,8 @@
   align-items: center;
   .card {
     display: flex;
-    border: red 1px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 15px;
     width: 60%;
     height: auto;
     .card-header {
@@ -14,9 +15,35 @@
     }
     .card-body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       padding: 5px;
       width: 40%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .welcome-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+
+        .title {
+          font-size: 20px;
+          font-family: 'Roboto', sans-serif;
+        }
+
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
       .p-password-panel {
         width: 100%;
       }
@@ -25,8 +52,12 @@
         flex-direction: column;
         gap: 20px;
         justify-content: center;
+        align-items: center;
+        .email-field, .password-field {
+          width: 90%;
+        }
         .field-title {
-          margin: 0;
+          margin: 0 0 5px 0;
         }
       }
     }
@@ -40,6 +71,26 @@
   }
   .p-inputtext{
     width: 100%;
+    &:enabled:focus {
+      box-shadow: 0 0 0 0.09rem #9fc7b0;
+      border-color: #9fc7b0;
+    }
+  }
+  .p-button {
+    background: #9fc7b0;
+    border: 1px solid #9fc7b0;
+    color: #3F7B37;
   }
 
+
+}
+
+@media (max-width: 768px) {
+  .card-header {
+    display: none;
+  }
+
+  .card-body {
+
+  }
 }

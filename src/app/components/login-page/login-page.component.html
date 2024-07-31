@@ -5,6 +5,11 @@
       <img src="assets/login-image.svg" alt="illustrator image">
     </div>
     <div class="card-body">
+      <div class="welcome-message">
+        <p class="title">Welcome back</p>
+        <p>Glad to see you again</p>
+        <p>Login to your account below</p>
+      </div>
       <div class="input-fields">
         <div class="email-field">
           <p class="field-title">Email</p>
@@ -14,6 +19,9 @@
           <p class="field-title">Password</p>
           <p-password [(ngModel)]="value" [toggleMask]="true" />
         </div>
+      </div>
+      <div class="actions">
+        <p-button class="btn-login" label="Login"/>
       </div>
     </div>
   </div>
