@@ -1,4 +1,4 @@
-export type Item = {
+export type Raffle = {
   num: number;
   name: string;
   image: string;

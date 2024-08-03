@@ -24,7 +24,7 @@ export class AuthService {
   }
 
   submitLoginForm(formData: LoginPostRequest): Observable<AuthResponse> {
-    return this.httpClient.post<AuthResponse>(this.apiUrlAuth + '/authenticate', formData, httpOptions)
+    return this.httpClient.post<AuthResponse>('/api/auth/authenticate', formData, httpOptions)
   }
 
   login(accessToken: string): void {

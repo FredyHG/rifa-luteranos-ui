@@ -3,16 +3,22 @@
   justify-content: center;
   height: 100vh;
   align-items: center;
+  .loading-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .card {
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
     border-radius: 15px;
     width: 60%;
-    height: 80vh;
+    //height: 80vh;
     min-width: 600px;
     @media (max-width: 768px) {
       min-width: 350px;
-      height: 60vh;
+      height: 50vh;
     }
     .card-header {
       width: 60%;

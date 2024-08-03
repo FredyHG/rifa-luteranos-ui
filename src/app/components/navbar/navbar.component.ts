@@ -2,7 +2,7 @@ import {Component, HostListener} from '@angular/core';
 import {NgClass, NgIf} from "@angular/common";
 import {BadgeModule} from "primeng/badge";
 import {ItemService} from "../../services/item.service";
-import {Item} from "../../models/Item";
+import {Raffle} from "../../models/Raffle";
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +23,7 @@ export class NavbarComponent {
 
   constructor(private itemService: ItemService) {
     this.itemService.itemInCart$.subscribe(
-      (itemsInCart: Item[]) => {
+      (itemsInCart: Raffle[]) => {
         this.itemsInCard = itemsInCart.length;
       }
     );

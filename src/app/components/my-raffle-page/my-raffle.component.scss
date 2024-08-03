@@ -1,16 +1,13 @@
 .cart-page{
   display: flex;
-  // gap:5px;
   justify-content: space-between;
-  height: 92vh;
   .side-navbar{
     background-color: #e9edea;
-    width: 10rem;
     .nav-actions{
       display: flex;
       flex-direction: column;
       min-width: 200px;
-      height: 100vh;
+      height: 93vh;
       padding-top: 2rem;
       gap: 1rem;
       .nav-button{

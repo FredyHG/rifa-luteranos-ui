@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemService} from "../../services/item.service";
-import {Item} from "../../models/Item";
+import {Raffle} from "../../models/Raffle";
 import {NgForOf} from "@angular/common";
 import {CarouselModule} from "primeng/carousel";
 import {SpeedDialModule} from "primeng/speeddial";
 import {MenuItem} from "primeng/api";
+import {RaffleCollections} from "../../models/RaffleCollections";
 
 @Component({
   selector: 'app-raffle-zone',
@@ -19,7 +20,7 @@ import {MenuItem} from "primeng/api";
 })
 export class RaffleZoneComponent implements OnInit{
 
-  items: Item[] = [];
+  items: Raffle[] = [];
   itemsFloatButton: MenuItem[] = [];
 
   constructor(private itemService: ItemService) {
@@ -39,20 +40,26 @@ export class RaffleZoneComponent implements OnInit{
 
   getItems(): void{
     this.itemService.getItems().subscribe({
-      next: response => {
-        this.items = response
+      complete(): void {
+
       },
+      error(err: any): void {
+
+      },
+      next: (response: RaffleCollections): void => {
+        this.items = response.collection[0].raffles;
+      }
 
     })
   }
 
-  addCart(itemToAdd: Item): void{
+  addCart(itemToAdd: Raffle): void{
 
     this.items = this.items.filter(item => item.name !== itemToAdd.name);
     this.itemService.addItemInCar(itemToAdd);
   }
 
-  removeItem(item: Item) {
+  removeItem(item: Raffle) {
     this.itemService.removeItemInCar(item);
   }
 

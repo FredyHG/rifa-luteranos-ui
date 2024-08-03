@@ -4,7 +4,7 @@
     <div class="card-header">
       <img src="assets/login-image.svg" alt="illustrator image">
     </div>
-    <div class="card-body">
+    <div class="card-body"  *ngIf="!loginLoading">
       <div class="welcome-message">
         <p class="title">Welcome back</p>
         <p>Glad to see you again</p>
@@ -30,7 +30,10 @@
         </div>
       </form>
     </div>
+    <div *ngIf="loginLoading" class="loading-container">
+      <p-progressSpinner ariaLabel="loading" />
+    </div>
   </div>
-
 </div>
+<p-toast></p-toast>
 
